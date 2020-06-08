@@ -1,6 +1,4 @@
-#ifdef _DEBUG
-#ifndef TIMER_H
-#define TIMER_H
+#pragma once
 
 #include <chrono>
 #include <iostream>
@@ -15,15 +13,9 @@ public:
 	double duration;
 
 private:
-	const std::string& callFunction;
-	const std::string& additionalInfo;
 	std::chrono::time_point<std::chrono::steady_clock> startTime;
 };
 
 
+
 #define TIMER	Timer timer(std::string(__FILE__), std::to_string(__LINE__))
-
-
-#endif
-#endif
-
