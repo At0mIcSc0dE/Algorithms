@@ -12,13 +12,41 @@
 #include "Timer.h"
 
 
+#pragma region Functions
+
+int GetMinIndexInVec(const std::vector<int>& vec)
+{
+	int minVal = -1;
+	int minValIndex = -1;
+
+	for (unsigned int j = 0; j < vec.size(); ++j)
+	{
+		if (minVal != -1)
+		{
+			if (vec[j] < minVal)
+			{
+				minVal = vec[j];
+				minValIndex = j;
+			}
+		}
+		else
+		{
+			minVal = vec[0];
+			minValIndex = 0;
+		}
+	}
+	return minValIndex;
+}
+#pragma endregion
+
+
 #pragma region Operator<<
 
 std::ostream& operator<<(std::ostream& os, std::vector<int>& vec)
 {
 	for (int& elem : vec)
 	{
-		std::cout << elem << ",\n";
+		std::cout << elem << ", ";
 	}
 	return os;
 }
@@ -40,7 +68,8 @@ std::vector<int> SelectionSort(std::vector<int>& unsortedArr)
 		for (unsigned int i = 0; i < arrSize; ++i)
 		{
 			//Get index of minimum value
-			IndexOfMinVal = std::min_element(unsortedArr.begin(), unsortedArr.end()) - unsortedArr.begin();
+			//IndexOfMinVal = std::min_element(unsortedArr.begin(), unsortedArr.end()) - unsortedArr.begin();
+			IndexOfMinVal = GetMinIndexInVec(unsortedArr);
 
 			sortedArr.insert(sortedArr.begin() + i, unsortedArr[IndexOfMinVal]);
 			unsortedArr.erase(unsortedArr.begin() + IndexOfMinVal);
@@ -56,8 +85,8 @@ std::vector<int> SelectionSort(std::vector<int>& unsortedArr)
 
 std::vector<int>& SimpleSort(std::vector<int>& arr)
 {
-	TIMER;
 	{
+		TIMER;
 		for (unsigned int i = 0; i < arr.size(); ++i)
 		{
 			for (unsigned int j = i + 1; j < arr.size(); ++j)
@@ -76,8 +105,6 @@ std::vector<int>& SimpleSort(std::vector<int>& arr)
 #pragma endregion
 
 
-
-
 int main()
 {
 	//std::vector<int> unsortedVec = { 5, 1, 2, 16, 44, 3, 11 };
@@ -86,10 +113,13 @@ int main()
 		unsortedVec.emplace_back(rand());
 
 
-	std::vector<int> sortedVec = SelectionSort(unsortedVec);
+	std::vector<int> sortedVec = SelectionSort(unsortedVec);	//413ms		//213ms
 
 	std::cout << sortedVec << '\n';
-	std::cin.get();
+
+	//int minvalindex = GetMinIndexInVec({ 5, 2, 8, 1, 6 });
+	//std::cout << minvalindex << '\n';
+
 }
 
 

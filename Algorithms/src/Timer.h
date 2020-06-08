@@ -21,7 +21,7 @@ private:
 };
 
 
-#define TIMER	Timer timer(std::string(__FUNCTION__), std::to_string(__LINE__))
+#define TIMER	Timer timer(std::string(__FILE__), std::to_string(__LINE__))
 
 
 #endif

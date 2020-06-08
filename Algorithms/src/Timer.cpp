@@ -12,7 +12,7 @@ Timer::Timer(const std::string& callFunction, const std::string& additionalInfo)
 
 Timer::~Timer() {
 	duration = std::chrono::duration<double>(std::chrono::duration_cast<std::chrono::microseconds>(std::chrono::high_resolution_clock().now() - startTime)).count();
-	std::cout << std::string("\nFunction: \"") + std::string(callFunction) + std::to_string(duration) + std::string("ms (") + std::string(additionalInfo) + std::string(")") + "\n";
+	std::cout << std::string("\File: \"") + std::string(callFunction) + std::to_string(duration) + std::string("ms (") + std::string(additionalInfo) + std::string(")") + "\n";
 }
 
 
