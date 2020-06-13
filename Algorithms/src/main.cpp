@@ -2,8 +2,9 @@
 
 #include "SortingAlgorithms/BasicSort.h"
 #include "SortingAlgorithms/SelectionSort.h"
+#include "SortingAlgorithms/Quicksort.h"
 
-#define LOG_ARRAY 0
+#define LOG_ARRAY 1
 
 
 std::ostream& operator<<(std::ostream& os, std::vector<int>& vec)
@@ -20,13 +21,13 @@ std::ostream& operator<<(std::ostream& os, std::vector<int>& vec)
 
 int main()
 {
-	//std::vector<int> unsortedVec = { 5, 1, 2, 16, 44, 3, 11 };
-	std::vector<int> unsortedVec;
-	for (int i = 0; i < 100000; ++i)
-		unsortedVec.emplace_back(rand());
+	std::vector<int> unsortedVec = { 2, 6, 5, 3, 8, 7, 1, 0 };
+	//std::vector<int> unsortedVec;
+	//for (int i = 0; i < 100000; ++i)
+	//	unsortedVec.emplace_back(rand());
 
 
-	std::vector<int> sortedVec = SelectionSort(unsortedVec);
+	std::vector<int> sortedVec = QuickSort(unsortedVec);
 
 	std::cout << sortedVec << '\n';
 

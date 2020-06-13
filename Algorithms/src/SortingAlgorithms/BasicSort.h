@@ -22,6 +22,9 @@ std::vector<int>& BasicSort(std::vector<int>& arr)
 					int temp = arr[i];
 					arr[i] = arr[j];
 					arr[j] = temp;
+					//arr[i] ^= arr[j];
+					//arr[j] ^= arr[i];
+					//arr[i] ^= arr[j];
 				}
 			}
 		}
