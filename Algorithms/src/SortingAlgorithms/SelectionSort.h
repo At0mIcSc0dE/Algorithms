@@ -40,7 +40,7 @@ std::vector<int> SelectionSort(std::vector<int>& unsortedArr)
 	{
 		TIMER;
 		unsigned int IndexOfMinVal;
-		unsigned int arrSize = unsortedArr.size();
+		size_t arrSize = unsortedArr.size();
 
 		for (unsigned int i = 0; i < arrSize; ++i)
 		{
