@@ -41,5 +41,8 @@
     <ClInclude Include="src\SortingAlgorithms\Quicksort.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="src\Problems\FindDuplicateAndMissingElementInArray.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
