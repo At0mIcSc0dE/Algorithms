@@ -53,5 +53,8 @@
     <ClInclude Include="src\SearchAlgorithms\BinarySearch.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="src\SearchAlgorithms\FindSequenceInArray.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
