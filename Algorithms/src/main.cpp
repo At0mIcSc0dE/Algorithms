@@ -5,7 +5,10 @@
 #include "SortingAlgorithms/Quicksort.h"
 
 #include "Problems/FindDuplicateAndMissingElementInArray.h"
+#include "Problems/SmallestValueRepeatedKTimes.h"
 
+#include "SearchAlgorithms/BinarySearch.h"
+#include "SearchAlgorithms/FindSequenceInArray.h"
 
 #define LOG_ARRAY 1
 
@@ -33,13 +36,14 @@ std::ostream& operator<<(std::ostream& os, std::unordered_set<int>& set)
 
 int main()
 {
-	std::vector<int> vec = { 4, 3, 6, 5, 2, 4 };
-	//std::vector<int> unsortedVec;
+	std::vector<int> seq = { 1, 2, 3 };
+	std::vector<int> vec = { 1, 1, 2, 5, 3, 6, 34, 6 };
+	//std::vector<int> vec;
 	//for (int i = 0; i < 100000; ++i)
-	//	unsortedVec.emplace_back(rand());
+		//vec.emplace_back(rand());
 
-	Elements e = FindDuplicateAndMissingElementInArray(vec);
-	std::cout << e.Duplicate << ", " << e.Missing << '\n';
+	std::pair<int, int> result = FindSequenceInArray(seq, vec);
+	std::cout << result.first << ", " << result.second << '\n';
 }
 
 

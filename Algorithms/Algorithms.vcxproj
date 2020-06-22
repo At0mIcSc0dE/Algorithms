@@ -167,6 +167,9 @@
   <ItemGroup>
     <ClInclude Include="src\pch.h" />
     <ClInclude Include="src\Problems\FindDuplicateAndMissingElementInArray.h" />
+    <ClInclude Include="src\Problems\LastOccurenceOfElement.h" />
+    <ClInclude Include="src\Problems\SmallestValueRepeatedKTimes.h" />
+    <ClInclude Include="src\SearchAlgorithms\BinarySearch.h" />
     <ClInclude Include="src\SortingAlgorithms\BasicSort.h" />
     <ClInclude Include="src\SortingAlgorithms\Quicksort.h" />
     <ClInclude Include="src\SortingAlgorithms\SelectionSort.h" />
