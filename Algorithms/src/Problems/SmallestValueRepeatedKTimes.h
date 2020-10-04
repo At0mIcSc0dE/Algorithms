@@ -12,7 +12,7 @@ int FindSmallestValueRepeatedKTimes(std::vector<int>& vec, const int& k)
 		for (int i = 0; i < vec.size(); ++i)
 		{
 			if ((double)k - 1 + i < vec.size()) {
-				if (vec[i] == vec[(double)k - 1 + i])
+				if (vec[i] == vec[k - 1 + i])
 					return vec[i];
 			}
 		}

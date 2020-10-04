@@ -21,5 +21,6 @@ std::pair<int, int> FindSequenceInArray(const std::vector<int>& sequence, const 
 			break;
 		}
 	}
+	return {};
 }
 

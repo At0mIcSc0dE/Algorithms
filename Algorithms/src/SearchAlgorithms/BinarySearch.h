@@ -9,7 +9,7 @@ int BinarySearch(std::vector<int>& vec, const int& searchedElement)
 	std::sort(vec.begin(), vec.end());
 
 	int lowBound = 0;
-	int highBound = vec.size() - 1;
+	int highBound = (int)vec.size() - 1;
 
 	while (lowBound <= highBound)
 	{
